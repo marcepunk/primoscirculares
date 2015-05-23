@@ -23,8 +23,8 @@ static int cantc =0;
    
 
        
- pasouno hilo1 = new pasouno(2,99);                        
- pasouno hilo2 = new pasouno(100,999);
+ pasouno hilo1 = new pasouno(2,99);             //ese rango en el los parametros de los hilos esta asi            
+ pasouno hilo2 = new pasouno(100,999);          //porque no me genera inconsistencia en el arraylist.
  pasouno hilo3 = new pasouno(1000,9999);
  pasouno hilo4 = new pasouno(10000,99999);
  pasouno hilo5 = new pasouno(100000,999999);

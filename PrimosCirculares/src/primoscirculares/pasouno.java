@@ -11,14 +11,14 @@ package primoscirculares;
  */
 import java.util.ArrayList;
 
-import static primoscirculares.PrimosCirculares.z;
-import static primoscirculares.PrimosCirculares.cant;
+import static primoscirculares.PrimosCirculares.z;          // hago uso de variables globales por que tuve problemas
+import static primoscirculares.PrimosCirculares.cant;       //con la sincronizacion de los hilos
 import static primoscirculares.PrimosCirculares.cantc;
 
 public class pasouno extends Thread 
 {
    
-   public ArrayList <Integer> primos = new ArrayList();
+   public ArrayList <Integer> primos = new ArrayList();         //uso un arreglo dinamico
    //public static ArrayList <Integer> z = new ArrayList();
     ArrayList <Integer> a = new ArrayList();
     int desde,hasta;
@@ -101,7 +101,7 @@ public class pasouno extends Thread
                        circu= false;
                        
                    }
-                    if (despla.length==2)                  //esta parte no tiene nada optimo
+                    if (despla.length==2)                  
                    {
                      
                    String caracter = new String(despla);
@@ -123,9 +123,9 @@ public class pasouno extends Thread
                    }
                     
                     /////////////////////////////////
-                    if (despla.length==3)                  //esta parte no tiene nada optimo
-                   {
-                      
+                    if (despla.length==3)                  //en esta parte evaluo el tamaño del numero 
+                   {                                       //y muevo sus digitos de lugar para buscar si el nuevo numero es primo
+                                                           // y de tal forma comprobar si es un primo circular
                        rotar(despla);
                   
                    String caracter = new String(despla);
@@ -235,7 +235,7 @@ public class pasouno extends Thread
                 System.out.println(j.next());*/
       
     }
-     public  char[] rotar(char[] c)
+     public  char[] rotar(char[] c)   //funcion que me permite rotar los numeros primos 
  {
   char primero = c[0];
   int x;
